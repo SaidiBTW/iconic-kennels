@@ -16,9 +16,7 @@
 <section class="max-w-3xl mx-auto px-6 py-12">
   <!-- Header -->
   <div class="text-center mb-10">
-    <h1 class="text-4xl font-bold font-['Playfair_Display'] mb-3">
-      Puppy Adoption Form
-    </h1>
+    <h1 class="text-4xl font-bold mb-3">Puppy Adoption Form</h1>
     <p class="text-gray-600 max-w-2xl mx-auto">
       We’re excited to help you find your perfect German Shepherd puppy! Please
       complete the form below, and our team will get in touch to guide you
@@ -93,7 +91,7 @@
     <div class="pt-4 text-center">
       <button
         type="submit"
-        class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition shadow-sm"
+        class="bg-black text-white font-semibold px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200"
       >
         Submit Application
       </button>

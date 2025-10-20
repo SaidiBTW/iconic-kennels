@@ -82,9 +82,7 @@
 
 <!-- Page Header -->
 <section class="max-w-6xl mx-auto px-6 py-16">
-  <h1
-    class="text-4xl md:text-5xl font-bold font-[Playfair_Display] text-center text-gray-900 mb-6"
-  >
+  <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6">
     Our Dogs
   </h1>
   <p class="text-center text-gray-600 max-w-2xl mx-auto leading-relaxed mb-16">

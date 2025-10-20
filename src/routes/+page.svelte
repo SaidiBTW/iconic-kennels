@@ -6,14 +6,16 @@
     InstagramIcon,
     PawPrint,
   } from "@lucide/svelte";
+
+  function handleViewGallery() {
+    window.location.href = "/gallery";
+  }
 </script>
 
 <!-- Hero Section -->
 <section class="max-w-6xl mx-auto px-6 py-12">
   <div class="text-center mb-12">
-    <h1
-      class="text-4xl md:text-5xl font-bold font-[Playfair_Display] text-gray-900 mb-4"
-    >
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
       Welcome to Iconic Kennels
     </h1>
     <p class="text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -50,8 +52,9 @@
       </p>
       <button
         class="mt-4 px-5 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
+        onclick={handleViewGallery}
       >
-        Learn More
+        View Gallery
       </button>
     </div>
   </div>
@@ -61,9 +64,7 @@
 <section class="bg-gray-50 py-16 px-6">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
     <div class="md:w-1/2">
-      <h2
-        class="text-3xl md:text-4xl font-bold font-[Playfair_Display] text-gray-900 mb-6"
-      >
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
         Meet the Champions of Iconic Kennels
       </h2>
       <p class="text-gray-700 leading-relaxed">
@@ -131,9 +132,7 @@
 
 <!-- Testimonials -->
 <section class="max-w-6xl mx-auto py-16 px-6">
-  <h2
-    class="text-3xl md:text-4xl font-bold font-[Playfair_Display] text-gray-900 mb-10 text-center"
-  >
+  <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">
     What Our Clients Say
   </h2>
   <div class="grid md:grid-cols-2 gap-8">
@@ -181,9 +180,7 @@
 <!-- Social Section -->
 <section class="bg-gray-50 py-12">
   <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold font-[Playfair_Display] text-gray-900 mb-6">
-      Connect with Us
-    </h2>
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Connect with Us</h2>
     <div class="flex justify-center space-x-6">
       <a
         href="https://www.facebook.com/iconickennels"

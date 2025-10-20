@@ -18,13 +18,13 @@
 </script>
 
 <nav
-  class="fixed top-0 left-0 w-full backdrop-blur-md bg-white/70 border-b border-gray-200 z-50"
+  class="fixed top-0 left-0 w-full backdrop-blur-md bg-white/70 border-b border-gray-200 z-50 py-2"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
       <div class="flex items-center space-x-2">
-        <img src={logo} alt="Iconic Kennels Logo" class="h-9 w-9" />
+        <img src={logo} alt="Iconic Kennels Logo" class="h-12 w-24" />
         <span class="text-xl font-semibold text-gray-800 tracking-tight">
           Iconic Kennels
         </span>

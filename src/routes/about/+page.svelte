@@ -1,9 +1,11 @@
+<script>
+  import dog1 from "$lib/assets/dog1.jpeg";
+</script>
+
 <section class="bg-white text-gray-800">
   <!-- Hero / Intro -->
   <div class="max-w-5xl mx-auto px-6 py-16 text-center">
-    <h1
-      class="text-4xl md:text-5xl font-bold font-['Playfair_Display'] text-gray-900 mb-4"
-    >
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
       We Are Iconic Kennels
     </h1>
     <p class="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -14,7 +16,7 @@
   <!-- About Section -->
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
     <img
-      src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?q=80&w=1200"
+      src={dog1}
       alt="German Shepherd"
       class="rounded-2xl shadow-md object-cover w-full h-[400px]"
     />

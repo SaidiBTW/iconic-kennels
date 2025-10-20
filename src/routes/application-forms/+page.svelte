@@ -5,27 +5,22 @@
       description:
         "Apply to adopt one of our adorable German Shepherd puppies.",
       link: "/application-forms/puppy-adoption-form",
-      color: "bg-blue-100 text-blue-800",
     },
     {
       title: "Adult Adoption",
       description: "Find your perfect adult German Shepherd companion.",
       link: "/application-forms/german-shepherd-adoption-form",
-      color: "bg-green-100 text-green-800",
     },
     {
       title: "Stud Service",
       description: "Apply for our professional German Shepherd stud services.",
       link: "/application-forms/german-shepherd-stud-form",
-      color: "bg-yellow-100 text-yellow-800",
     },
   ];
 </script>
 
 <section class="max-w-5xl mx-auto px-4 py-12">
-  <h1 class="text-4xl font-bold text-center font-['Playfair_Display'] mb-4">
-    Application Forms
-  </h1>
+  <h1 class="text-4xl font-bold text-center mb-4">Application Forms</h1>
   <p class="text-center text-gray-600 mb-10">
     Please select an application form below to begin.
   </p>
@@ -33,12 +28,13 @@
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
     {#each forms as form}
       <div
-        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition p-6 flex flex-col items-center text-center"
+        class="group bg-white/60 backdrop-blur-lg p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center"
       >
+        <!-- Gradient icon container -->
         <div
-          class={`w-16 h-16 flex items-center justify-center rounded-full mb-4 ${form.color}`}
+          class="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-gray-900 to-gray-700 text-white shadow-md group-hover:scale-110 transition-transform duration-300 mb-4"
         >
-          <!-- Simple icon placeholder; you can replace with lucide or heroicons -->
+          <!-- Replace with lucide or heroicons if desired -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -55,12 +51,12 @@
           </svg>
         </div>
 
-        <h2 class="text-xl font-semibold mb-2">{form.title}</h2>
-        <p class="text-gray-600 text-sm mb-4">{form.description}</p>
+        <h2 class="text-xl font-semibold text-gray-900 mb-2">{form.title}</h2>
+        <p class="text-gray-600 text-sm mb-6">{form.description}</p>
 
         <a
           href={form.link}
-          class="mt-auto inline-block w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+          class="mt-auto inline-block w-full py-2 px-4 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200"
         >
           Fill Out Form
         </a>

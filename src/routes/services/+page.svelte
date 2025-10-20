@@ -14,9 +14,7 @@
 <div class="max-w-7xl mx-auto px-6 py-20 space-y-28 text-gray-800">
   <!-- HERO -->
   <section class="text-center space-y-5">
-    <h1
-      class="text-5xl md:text-6xl font-bold font-['Playfair_Display'] text-gray-900 tracking-tight"
-    >
+    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 tracking-tight">
       Our Services
     </h1>
     <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -50,9 +48,7 @@
   <!-- FEATURE SECTION -->
   <section class="flex flex-col md:flex-row items-center gap-14">
     <div class="md:w-1/2 space-y-6">
-      <h2
-        class="text-3xl md:text-4xl font-bold text-gray-900 font-['Playfair_Display']"
-      >
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
         Why Choose Iconic Kennels
       </h2>
       <p class="text-gray-600 leading-relaxed">
@@ -102,7 +98,7 @@
       class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700"
     ></div>
     <div class="relative z-10 space-y-6 text-white">
-      <h2 class="text-3xl md:text-4xl font-bold font-['Playfair_Display']">
+      <h2 class="text-3xl md:text-4xl font-bold">
         Ready to Begin Your Journey?
       </h2>
       <p class="text-gray-300 max-w-xl mx-auto leading-relaxed">

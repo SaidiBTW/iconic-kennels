@@ -18,9 +18,7 @@
 <section class="max-w-3xl mx-auto px-6 py-12">
   <!-- Header -->
   <div class="text-center mb-10">
-    <h1 class="text-4xl font-bold font-['Playfair_Display'] mb-3">
-      German Shepherd Stud Application
-    </h1>
+    <h1 class="text-4xl font-bold mb-3">German Shepherd Stud Application</h1>
     <p class="text-gray-600 max-w-2xl mx-auto">
       If you own a German Shepherd male and would like to register him for stud
       services, please fill out the form below. Our team will review your

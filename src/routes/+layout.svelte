@@ -1,5 +1,5 @@
 <script lang="ts">
-  import favicon from "$lib/assets/favicon.svg";
+  import favicon from "$lib/assets/favicon.ico";
   import Navbar from "$lib/components/layout/Navbar.svelte";
   import "../app.css";
 
@@ -16,7 +16,7 @@
   <Navbar />
 
   <!-- ✅ Render current route -->
-  <main class="flex-1 container mx-auto p-4">
+  <main class="flex-1 container mx-auto py-8 mt-12">
     {@render children?.()}
   </main>
 </div>
