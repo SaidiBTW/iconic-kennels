@@ -2,6 +2,7 @@
   import { page } from "$app/stores";
   import logo from "$lib/assets/logo.png";
   import { derived } from "svelte/store";
+
   let menuOpen = false;
 
   const currentPath = derived(page, ($page) => $page.url.pathname);
@@ -16,67 +17,80 @@
   ];
 </script>
 
-<nav class="bg-white border-b border-gray-200">
+<nav
+  class="fixed top-0 left-0 w-full backdrop-blur-md bg-white/70 border-b border-gray-200 z-50"
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16 items-center">
-      <!-- Desktop Links -->
-      <!--Show Logo from asset folder-->
-      <div class="hidden md:flex items-center">
-        <img src={logo} alt="Iconic Kennels Logo" class="h-8 w-8 mr-2" />
-        <span class="text-xl font-bold text-gray-800">Iconic Kennels</span>
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src={logo} alt="Iconic Kennels Logo" class="h-9 w-9" />
+        <span class="text-xl font-semibold text-gray-800 tracking-tight">
+          Iconic Kennels
+        </span>
       </div>
-      <div class="hidden md:flex space-x-8">
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center space-x-8">
         {#each links as link}
           <a
             href={link.href}
-            class="text-gray-600 hover:text-gray-900 font-medium"
-            class:underline={$currentPath === link.href}
+            class="relative text-gray-600 hover:text-gray-900 font-medium transition-colors duration-200"
           >
-            {link.name}
+            <span class={$currentPath === link.href ? "text-gray-900" : ""}>
+              {link.name}
+            </span>
+            <span
+              class="absolute left-0 -bottom-1 h-0.5 bg-gray-900 transition-all duration-300"
+              class:w-full={$currentPath === link.href}
+              class:w-0={$currentPath !== link.href}
+            ></span>
           </a>
         {/each}
       </div>
 
       <!-- Mobile Menu Button -->
       <button
-        type="button"
-        class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none"
+        class="md:hidden relative z-50 text-gray-700 focus:outline-none"
         on:click={() => (menuOpen = !menuOpen)}
         aria-label={menuOpen ? "Close menu" : "Open menu"}
-        aria-expanded={menuOpen}
       >
-        <svg
-          class="h-6 w-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d={menuOpen
-              ? "M6 18L18 6M6 6l12 12" // X icon
-              : "M4 6h16M4 12h16M4 18h16"}
-          />
-        </svg>
+        <div class="w-6 h-6 flex flex-col justify-between">
+          <span
+            class="block h-0.5 bg-gray-800 transition-all duration-300"
+            class:rotate-45={menuOpen}
+            class:translate-y-2={menuOpen}
+          ></span>
+          <span
+            class="block h-0.5 bg-gray-800 transition-all duration-300"
+            class:opacity-0={menuOpen}
+          ></span>
+          <span
+            class="block h-0.5 bg-gray-800 transition-all duration-300"
+            class:-rotate-45={menuOpen}
+            class:-translate-y-2={menuOpen}
+          ></span>
+        </div>
       </button>
     </div>
   </div>
 
-  <!-- Mobile Links -->
-  {#if menuOpen}
-    <div class="md:hidden px-4 pb-3 space-y-1 border-t border-gray-200">
+  <!-- Mobile Menu -->
+  <div
+    class="md:hidden fixed inset-x-0 top-16 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg transition-all duration-300"
+    class:translate-y-0={menuOpen}
+    class:-translate-y-full={!menuOpen}
+  >
+    <div class="px-6 py-4 space-y-4">
       {#each links as link}
         <a
           href={link.href}
-          class="block py-2 text-gray-700 hover:text-gray-900 font-medium"
-          class:underline={$currentPath === link.href}
           on:click={() => (menuOpen = false)}
+          class="block text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors"
         >
           {link.name}
         </a>
       {/each}
     </div>
-  {/if}
+  </div>
 </nav>
