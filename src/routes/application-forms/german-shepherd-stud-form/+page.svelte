@@ -121,7 +121,7 @@
     <div class="pt-4 text-center">
       <button
         type="submit"
-        class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition shadow-sm"
+        class="bg-black text-white font-semibold px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200"
       >
         Submit Application
       </button>
